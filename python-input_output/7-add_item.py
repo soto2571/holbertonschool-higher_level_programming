@@ -16,7 +16,7 @@ filename = "add_item.json"
 
 
 if exists(filename):
-    items = load_from_json_file(filename)
+    items = load_form_json_file(filename)
 else:
     items = []
 
@@ -24,4 +24,4 @@ else:
 items.extend(sys.argv[1:])
 
 
-save_to_json_file(items,filename)
+save_to_json_file(items, filename)
