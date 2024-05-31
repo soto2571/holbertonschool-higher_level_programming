@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""simple server"""
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 
 
 class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
-    
+    """comment"""
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
