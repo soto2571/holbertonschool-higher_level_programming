@@ -25,18 +25,14 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header('Content-type', 'application/json')
             self.end_headers()
-            response = {"status": "OK"}
-            self.wfile.write(json.dumps(response).encode('utf-8'))
+            self.wfile.write(b'{"status": "OK"}')
         else:
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
-
 # Start the server
-
 with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
-
     print(f"Serving on port {PORT}")
     httpd.serve_forever()
