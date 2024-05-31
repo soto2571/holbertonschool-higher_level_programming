@@ -37,7 +37,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
 # Start the server
 
-with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd
+with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
 
     print(f"Serving on port {PORT}")
     httpd.serve_forever()
