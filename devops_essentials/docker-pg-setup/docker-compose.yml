@@ -3,8 +3,8 @@ services:
     image: postgres:latest
     environment:
       POSTGRES_DB: postgresdb
-      POSTGRES_USER: adminXavier
-      POSTGRES_PASSWORD: adminpass9038
+      POSTGRES_USER: adminSoto
+      POSTGRES_PASSWORD: adminpass9042
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
@@ -13,8 +13,8 @@ services:
   admin:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: 9038@holbertonstudents.com
-      PGADMIN_DEFAULT_PASSWORD: adminpass9038
+      PGADMIN_DEFAULT_EMAIL: 9042@holbertonstudents.com
+      PGADMIN_DEFAULT_PASSWORD: adminpass9042
     depends_on:
       - db
     ports:
