@@ -1,3 +1,4 @@
+-- jsl
 SELECT CONCAT('Table   Create Table') AS 'first_table',
        CONCAT(t.TABLE_NAME, '     ', t.CREATE_STATEMENT) AS 'first_table'
 FROM INFORMATION_SCHEMA.TABLES t
