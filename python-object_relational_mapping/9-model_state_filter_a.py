@@ -1,15 +1,20 @@
 #!/usr/bin/python3
-"""script that list all the states containing the letter 'a'"""
+"""script that lists all the states containing the letter 'a'"""
 import sys
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    # get credentials and the db name ffrom command line
+    # get credentials and the db name from command line
     username = sys.argv[1]
     password = sys.argv[2]
     dbname = sys.argv[3]
+
+    # Ensure the script directory is in the Python path
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    sys.path.append(script_dir)
 
     # create a engine to bind to the session
     engine = create_engine(
