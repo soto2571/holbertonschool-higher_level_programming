@@ -1,5 +1,8 @@
 [
     {"id": 1, "name": "Laptop", "category": "Electronics", "price": 799.99},
     {"id": 2, "name": "Coffee Mug", "category": "Home Goods", "price": 15.99},
-    {"id": 3, "name": "Jarvis", "category": "AI Assistant", "price": 2999.99}
+    {"id": 3, "name": "Headphones", "category": "Electronics", "price": 199.99},
+    {"id": 4, "name": "Notebook", "category": "Stationery", "price": 5.49},
+    {"id": 5, "name": "Smartphone", "category": "Electronics", "price": 999.99},
+    {"id": 6, "name": "Jarvis", "category": "AI Assistant", "price": 2999.99}
 ]
