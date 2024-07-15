@@ -4,17 +4,22 @@
     <title>Items List</title>
 </head>
 <body>
-    {% include 'header.html' %}
-    <h1>Items List</h1>
-    {% if items %}
-        <ul>
-            {% for item in items %}
-                <li>{{ item }}</li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No items found.</p>
-    {% endif %}
-    {% include 'footer.html' %}
+    <header>
+        <h1>Items List</h1>
+    </header>
+    <main>
+        {% if items %}
+            <ul>
+                {% for item in items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No items found.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 My Flask App</p>
+    </footer>
 </body>
 </html>
